@@ -37,11 +37,30 @@ class Functions {
         System.out.println(result);
     }
 
+    static void armstrong(double input) {
+        double holder = input;
+        double sum =0;
+
+        while(holder>0) {    
+            sum+= (int) Math.pow(holder%10,3);
+            holder= (int) holder/ 10;
+        }
+        if(sum==input) {System.out.println(true);} else {System.out.println(false);}
+    }
+
+    static void factorialIt(int input) {
+        int result = 1;
+        if(input ==0) {System.out.println(1); return;}
+        for(int i=1; i<input+1; i++) {
+            result*= i; 
+        }
+        System.out.println(result);
+    }
 }
 
 public class Practice {
     public static void main (String [] args) {
-        Functions.palindromeIterative("racecar");
+        Functions.factorialIt(1);
 
     }
 }
