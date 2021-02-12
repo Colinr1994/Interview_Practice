@@ -56,11 +56,22 @@ class Functions {
         }
         System.out.println(result);
     }
+
+    static int factorialRe(int input) {
+        if (input<=1) {return 1;}
+        else { return input*factorialRe(input-1);}
+    }
+
+    static void recursiveFact(int input) {
+        System.out.println(factorialRe(input));
+    }
+
 }
 
 public class Practice {
     public static void main (String [] args) {
-        Functions.factorialIt(1);
+        Functions.factorialIt(0);
+        Functions.recursiveFact(0);
 
     }
 }
