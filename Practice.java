@@ -66,12 +66,22 @@ class Functions {
         System.out.println(factorialRe(input));
     }
 
+    static void reverseString(String str) {
+        char[] array = str.toCharArray(); // string to character array
+        int length = str.length(); 
+        for(int i=0;i<str.length()/2;i++) { 
+            char holder = array[0];
+            array[i]=array[length-i-1];
+            array[length-i-1]=holder;
+        }
+        System.out.println(array);
+    }
+
 }
 
 public class Practice {
     public static void main (String [] args) {
-        Functions.factorialIt(0);
-        Functions.recursiveFact(0);
+        Functions.reverseString("hello world");
 
     }
 }
