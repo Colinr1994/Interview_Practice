@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 class Functions {
 
@@ -88,11 +89,24 @@ class Functions {
         }
     }
 
+    static void reverseWords(String input) {
+        String s = " ";
+        String out = "";
+        String[] words = input.split(s);
+        for(int i=words.length-1; i>=0; i--) {
+            out += words[i] + s;
+        }
+        System.out.println(out);
+    }
+
+    static void anagram(String input) {
+        
+    }
 }
 
 public class Practice {
     public static void main (String [] args) {
-        Functions.stringSearch("hello world", "woddr");
+        Functions.reverseWords("hello world how are you");
 
     }
 }
