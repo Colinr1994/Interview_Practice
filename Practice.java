@@ -70,18 +70,29 @@ class Functions {
         char[] array = str.toCharArray(); // string to character array
         int length = str.length(); 
         for(int i=0;i<str.length()/2;i++) { 
-            char holder = array[0];
+            char holder = array[i];
             array[i]=array[length-i-1];
             array[length-i-1]=holder;
         }
         System.out.println(array);
     }
 
+    static void stringSearch(String input, String search) {
+
+        for(int i=0; i<input.length(); i++) {
+            if(input.charAt(i)==search.charAt(0)) {
+                if(input.substring(i, i+search.length()).equals(search)) {
+                    System.out.println("Match");
+                }
+            }
+        }
+    }
+
 }
 
 public class Practice {
     public static void main (String [] args) {
-        Functions.reverseString("hello world");
+        Functions.stringSearch("hello world", "woddr");
 
     }
 }
